@@ -1,7 +1,8 @@
-import ad.Advertisment as Ad
+import ad
+import datetime
 
 def main():
-   ad1 = Ad.Ad('Alex', 'newfile', 'editnewfile', 24.10.2020-14.03, 1)
+   ad1 = ad.Advertisment('Alex', 'newfile', 'editnewfile', datetime.datetime.today, 1)
    print(ad1)
 
 main()
