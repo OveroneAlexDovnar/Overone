@@ -15,15 +15,16 @@
 # print(a)
 
 with open(r'C:\1.txt.log', 'r') as work_file:
-    words_list = work_file.read().splitlines()
+    words_list = work_file.read()
+    words_list.split()
     words_counter = {}
     for i in words_list:
-        if i not in words_counter.keys():
-            words_counter.update()
+        if i not in words_counter:
+            words_counter[i] = 1
         else:
-            words_counter.values( +1 )
+            words_counter[ i ] += 1
 print (len(words_list))
 print (words_counter)
-with open(r'c:\2.txt', 'w') as out_file:
+with open(r'e:\2.txt', 'w') as out_file:
     for key,val in words_counter.items():
         out_file.write('{}:{}\n'.format(key,val))
